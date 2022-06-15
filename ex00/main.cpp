@@ -6,7 +6,7 @@
 /*   By: cnorma <cnorma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 07:58:57 by cnorma            #+#    #+#             */
-/*   Updated: 2022/06/10 08:05:46 by cnorma           ###   ########.fr       */
+/*   Updated: 2022/06/15 20:25:15 by cnorma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,7 @@ int main(int argc, char **argv)
 	try
 	{
 		Conv toConvert(argv[1]);
-		// Conv toConvertCopy(toConvert);
-
 		toConvert.printConv();
-		// toConvertCopy.printConv();
 	}
 	catch (std::exception &e)
 	{

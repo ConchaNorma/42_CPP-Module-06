@@ -6,7 +6,7 @@
 /*   By: cnorma <cnorma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/22 18:26:42 by cnorma            #+#    #+#             */
-/*   Updated: 2022/06/10 08:04:20 by cnorma           ###   ########.fr       */
+/*   Updated: 2022/06/15 20:25:19 by cnorma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,23 +132,23 @@ void Conv::whichType()
 
 bool Conv::checkValidC()
 {
-	if ((this->_argI >= 32 and this->_argI < 127))
+	if ((this->_argI >= 32 && this->_argI < 127))
 		return 1;
 	return 0;
 }
 
 bool Conv::checkValidI()
 {
-	if (this->_argD >= INT_MIN and this->_argD <= INT_MAX)
+	if (this->_argD >= INT_MIN && this->_argD <= INT_MAX)
 		return 1;
 	return 0;
 }
 
 bool Conv::checkValidF()
 {
-	if (_argD != 0.0 and _argD >= -FLT_MIN and _argD <= FLT_MIN)
+	if (_argD != 0.0 && _argD >= -FLT_MIN && _argD <= FLT_MIN)
 		return 0;
-	if (this->_argD >= -FLT_MAX and this->_argD <= FLT_MAX and checkValidD())
+	if (this->_argD >= -FLT_MAX && this->_argD <= FLT_MAX && checkValidD())
 		return 1;
 	return 0;
 }
@@ -164,7 +164,7 @@ bool Conv::checkValidD()
 
 bool Conv::isConstant()
 {
-	if (this->_argD != this->_argD or this->_argF == INFINITY or -this->_argF == INFINITY)
+	if (this->_argD != this->_argD || this->_argF == INFINITY || -this->_argF == INFINITY)
 		return 1;
 	return 0;
 }
@@ -225,8 +225,8 @@ void Conv::printConv()
 		std::cout << "int: Impossible" << std::endl;
 		if (this->_argD != this->_argD)
 		{
-			std::cout << "float1: " << _argF << "f" << std::endl;
-			std::cout << "double1: " << _argD << std::endl;
+			std::cout << "float: " << _argF << "f" << std::endl;
+			std::cout << "double: " << _argD << std::endl;
 		}
 		else if (this->_argF == INFINITY)
 		{
